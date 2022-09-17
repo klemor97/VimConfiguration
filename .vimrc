@@ -1,17 +1,25 @@
 source $VIMRUNTIME/defaults.vim
 
-set background=dark
+syntax on
 
 set number
+set relativenumber
 
-syntax on
- 
 set nowrap
 
 set tabstop=4
 set shiftwidth=4
 
 set autoindent
+
+set noswapfile
+set nobackup
+
+set noerrorbells
+
+set incsearch
+
+set scrolloff=8
 
 set path+=**
 
@@ -20,12 +28,17 @@ set nocompatible
 noremap <F5> :buffers<CR>:buffer<Space>
 noremap <F6> :Explore<CR>
 
-let g:user_emmet_leader_key='<C-Z>'
+"let g:user_emmet_leader_key='<C-Z>'
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'sheerun/vim-polyglot'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
-Plug 'mattn/emmet-vim'
+"Plug 'sheerun/vim-polyglot'
+
+"Plug 'mattn/emmet-vim'
 
 call plug#end()
+
+set termguicolors
+colorscheme dracula
