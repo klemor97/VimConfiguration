@@ -40,5 +40,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
+let g:dracula_italic = 0
+
 set termguicolors
 colorscheme dracula
